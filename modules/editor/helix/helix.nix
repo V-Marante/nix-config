@@ -17,16 +17,12 @@
       };
 
       keys.insert = {
-        C-s = ":w!";
-        C-w = ":buffer-close";
-        C-a = ":reload-all";
-        y = [":clipboard-yank"  "yank"];
+        C-s = [":w!"  "normal_mode"];
+        C-w = [":buffer-close"  "normal_mode"];
         C-v = [":clipboard-paste-before"];
         C-right = [":bn"];
         C-left = [":bp"];
-        X = ["extend_line_up"  "extend_to_line_bounds"];
-        c = "change_selection_noyank";
- };
+  };
 
       keys.select = {
         y = [":clipboard-yank"  "yank"];
@@ -36,7 +32,7 @@
       
       editor = {
         line-number = "relative";
-        bufferline = "alwas";
+        bufferline = "always";
         mouse = false;
         
         true-color = true;
