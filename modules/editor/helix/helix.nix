@@ -6,7 +6,7 @@
     package = pkgs-unstable.steelix;
 
     settings = {
-       theme = "catppuccin_mocha_transparent";
+       theme = "catppuccin_mocha";
       
       editor = {
         scrolloff = 999;

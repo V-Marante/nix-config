@@ -2,8 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    dotnet-sdk
-    dotnet-ef
+    dotnet-sdk_10
     omnisharp-roslyn
   ];
 }
