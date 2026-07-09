@@ -7,6 +7,25 @@
 
     settings = {
        theme = "catppuccin_mocha";
+
+      keys.normal = {
+        C-s = ":w!";
+        C-w = ":buffer-close!";
+        C-a = ":reload-all";
+        y = [ ":clipboard-yank"  "yank" ];
+        C-v = [ ":clipboard-paste-before" ];
+      };
+
+      keys.insert = {
+        C-s = [":w!"  "normal_mode"];
+        C-w = [":buffer-close!"  "normal_mode"];
+        C-v = [ ":clipboard-paste-before" ];
+      };
+
+      keys.insert = {
+        y = [":clipboard-yank"  "yank"];
+      };
+
       
       editor = {
         scrolloff = 999;
@@ -24,9 +43,9 @@
         continue-comments = false;
 
         cursor-shape = {
-          insert = "block";
+          insert = "bar";
           normal = "block";
-          select = "block";
+          select = "underline";
         };
 
         indent-guides = {

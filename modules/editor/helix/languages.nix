@@ -1,14 +1,28 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  programs.helix.languages = {
-    language = [
+  programs.helix.extraPackages = with pkgs; [
+    roslyn-ls
+    csharpier
+  ];
 
+  programs.helix.languages = {
+    language-server = {
+      roslyn = {
+        command = "Microsoft.CodeAnalysis.LanguageServer";
+        args = [ "--stdio" ];
+      };
+    };
+
+    language = [
       {
         name = "c-sharp";
-        language-servers = [ "omnisharp" ];
+        language-servers = [ "roslyn" ];
+        formatter = {
+          command = "csharpier";
+        };
       }
-      
+
       {
         name = "python";
         language-servers = [ "pyright" ];
@@ -17,7 +31,6 @@
           unit = "    ";
         };
       }
-
 
       {
         name = "bash";
