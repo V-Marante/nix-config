@@ -20,17 +20,17 @@
         C-s = ":w!";
         C-w = ":buffer-close";
         C-a = ":reload-all";
-        y = [":clipboard-yank","yank"];
+        y = [":clipboard-yank"  "yank"];
         C-v = [":clipboard-paste-before"];
         C-right = [":bn"];
         C-left = [":bp"];
-        X = ["extend_line_up", "extend_to_line_bounds"];
+        X = ["extend_line_up"  "extend_to_line_bounds"];
         c = "change_selection_noyank";
  };
 
-      keys.insert = {
-        y = [":clipboard-yank","yank"];
-        X = ["extend_line_up", "extend_to_line_bounds"];
+      keys.select = {
+        y = [":clipboard-yank"  "yank"];
+        X = ["extend_line_up"  "extend_to_line_bounds"];
       };
 
       
