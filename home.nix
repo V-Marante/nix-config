@@ -5,6 +5,7 @@ imports = [
     ./modules/editor/default.nix
     ./modules/tools/default.nix
     ./modules/dev/default.nix
+    ./modules/agents/default.nix
   ];
 
   home.username = "victor-personal";

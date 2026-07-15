@@ -12,7 +12,17 @@
         command = "Microsoft.CodeAnalysis.LanguageServer";
         args = [ "--stdio" ];
       };
+
+      gopls = {
+        command = "gopls";
+        args = [ "-logfile=/tmp/gopls.log" "serve" ];
+        config = {
+          "ui.diagnostic.staticcheck" = true;  
+        };
+      };
     };
+
+    
 
     language = [
       {

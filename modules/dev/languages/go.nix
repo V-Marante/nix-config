@@ -5,6 +5,7 @@
 
   home.packages = with pkgs-unstable; [
     pkgs-unstable.go
+    pkgs-unstable.gopls
   ];
   
 }
